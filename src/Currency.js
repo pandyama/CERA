@@ -13,7 +13,7 @@ export default function Currency() {
     //   const getCurrencies = () => {
     await axios
       .get(
-        "https://v6.exchangerate-api.com/v6/API-KEY-REQUIRED/latest/USD"
+        "https://v6.exchangerate-api.com/v6/0a0fe73c79cc22a52d81823a/latest/USD"
       )
       .then((res) => {
         var currencies = [];
@@ -32,9 +32,10 @@ export default function Currency() {
   async function convert() {
     console.log(baseCurrency);
     console.log(targetCurrency);
+
     await axios
       .get(
-        `https://v6.exchangerate-api.com/v6/API-KEY-REQUIRED/pair/${baseCurrency}/${targetCurrency}`
+        `https://v6.exchangerate-api.com/v6/0a0fe73c79cc22a52d81823a/pair/${baseCurrency}/${targetCurrency}`
       )
       .then((res) => {
         console.log(res.data.conversion_rate);
