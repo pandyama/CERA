@@ -39,7 +39,7 @@ export default function Currency() {
       .then((res) => {
         console.log(res.data.conversion_rate);
         var rate = Number(res.data.conversion_rate);
-        setConvertedAmount((baseAmount*rate).toFixed(2));
+        setConvertedAmount((baseAmount * rate).toFixed(2));
       })
       .catch((err) => {
         console.log(err);
@@ -112,7 +112,12 @@ export default function Currency() {
         </select>
       </div>
       <div className="convert">
-        <button className="convertBTN" onClick={convert}>CONVERT</button>
+        <button className="convertBTN" onClick={convert}>
+          CONVERT
+        </button>
+      </div>
+      <div className="footer">
+        <footer>Powered by - www.exchangerate-api.com</footer>
       </div>
       {/* <div class="area"> */}
       <ul className="circles">

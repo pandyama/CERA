@@ -85,6 +85,17 @@ body {
   background-image: linear-gradient(#f38d68, #fffafb);
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: auto;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
 #initials {
   color: black;
   font-size: 43px;
@@ -137,7 +148,7 @@ body {
   color: white;
 }
 
-.convertBTN:active{
+.convertBTN:active {
   transform: scale(0.85);
   /* Scaling button to 0.98 to its original size */
   box-shadow: 6px 4px 44px 2px rgba(0, 0, 0, 0.64);
