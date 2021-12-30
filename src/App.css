@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
+
+* {
+  /* font-family: 'Fuzzy Bubbles', cursive; */
+  font-family: "Zen Kurenaido", sans-serif;
+  /* font-size: 30px; */
+  /* border: 3px solid blue; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-1300px) rotate(0deg);
+    opacity: 1;
+    border-radius: 20%;
+  }
+
+  100% {
+    transform: translateY(0) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  height: 100vh;
+  background-image: linear-gradient(#f38d68, #fffafb);
+}
+
+#initials {
+  color: black;
+  font-size: 43px;
+}
+
+.App {
+  padding: 10px;
+}
+
+.f1 {
+  display: flex;
+}
+
+.heading {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 14px;
+}
+
+.cera {
+  font-size: 65px;
+  font-weight: bold;
+}
+.subheading {
+  font-size: 33px;
+}
+
+.heading,
+.starting,
+.converted {
+  display: flex;
+  margin: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.starting,
+.converted {
+  padding: 10px;
+}
+
+.sInput,
+.sOutput {
+  margin: 5px;
+  border: 1px none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 22px;
+  background: #8a97ff;
+}
+
+.inputOptions,
+.convertOptions {
+  font-size: 22px;
+  margin: 5px;
+  border: 1px none;
+  border-radius: 10px;
+  padding: 10px;
+  background: #caff8a;
+}
+
+::placeholder {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
