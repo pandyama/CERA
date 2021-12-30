@@ -1,5 +1,6 @@
 # CERA
 Simple Currency Exchange Rate App
+Deployed using Heroku at - https://cera-mp.herokuapp.com/
 
 ## Tech
 - React, Axios, Pure CSS, Exchange-Rate API (www.exchangerate-api.com)
