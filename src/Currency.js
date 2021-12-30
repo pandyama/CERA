@@ -118,7 +118,9 @@ export default function Currency() {
         </button>
       </div>
       <div className="footer">
-        <footer>Powered by - www.exchangerate-api.com</footer>
+        <a href="https://www.exchangerate-api.com">
+          Rates By Exchange Rate API
+        </a>
       </div>
       {/* <div class="area"> */}
       <ul className="circles">
