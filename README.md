@@ -2,7 +2,7 @@
 Simple Currency Exchange Rate App
 
 ## Tech
-- React, Axios, Pure CSS, Exchange-Rate API
+- React, Axios, Pure CSS, Exchange-Rate API (www.exchangerate-api.com)
 
 ------
 ## Few Screenshots of the App can be seen below
